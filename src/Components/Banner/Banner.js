@@ -19,7 +19,7 @@ class Banner extends Component {
                 </div>
                 <div className={`row`} style={{ textAlign: 'center'}}>
                     <div className={`col-sm ${s.getStartedCta}`}>
-                        <button type="button" class="btn btn-dark">Begin Journey</button>
+                        <button type="button" className="btn btn-dark">Begin Journey</button>
                     </div>
                 </div>
             </div>
