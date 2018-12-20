@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './SixpackCalc.module.scss';
+import s from './SixpackCalc.module.scss';
 
 class SixpackCalc extends Component {
 
     render() {
         return (
-            <div>
+            <div  className={s.sixPackCalcContainer}>
                 <p>Sixpack calc component.</p>
             </div>
         );

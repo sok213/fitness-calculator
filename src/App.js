@@ -10,8 +10,8 @@ class App extends Component {
     return (
       <div className="App">
         <Banner />
-        {/* <WorkoutProgram />
-        <SixpackCalc /> */}
+        <SixpackCalc />
+        <WorkoutProgram />
       </div>
     );
   }
