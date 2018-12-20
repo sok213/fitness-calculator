@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import s from './Banner.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 class Banner extends Component {
 
@@ -19,7 +21,12 @@ class Banner extends Component {
                 </div>
                 <div className={`row`} style={{ textAlign: 'center'}}>
                     <div className={`col-sm ${s.getStartedCta}`}>
-                        <button type="button" className="btn btn-dark">Begin Journey</button>
+                        <button 
+                            type="button" 
+                            className={`btn btn-dark ${s.startCta}`}
+                        >
+                            <FontAwesomeIcon icon={faChevronDown} className={s.downIcon} />
+                        </button>
                     </div>
                 </div>
             </div>
