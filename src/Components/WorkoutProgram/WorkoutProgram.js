@@ -13,7 +13,7 @@ class WorkoutProgram extends Component {
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                     </div>
                 </div>
-                <div className={`row`}>
+                <div className={`row ${s.survey}`}>
                     <div className={`col-lg-12`}>
                         <PhysiqueSurvey />
                     </div>

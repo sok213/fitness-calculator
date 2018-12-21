@@ -1,9 +1,17 @@
 .workoutProgramContainer {
-    border: thin solid green;
+    border-top: thin solid grey;
     height: 100vh;
     padding: 40px;
+    border: 2px solid blue;
 
     @media screen and (max-width: 520px) {
         padding: 20px;
     }
+}
+
+.survey {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 90%;
 }
