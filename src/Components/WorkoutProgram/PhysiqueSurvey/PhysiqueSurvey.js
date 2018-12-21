@@ -25,13 +25,27 @@ class PhysiqueSurvey extends Component {
                     type: 'Overweight',
                     desc: ''
                 }
-            ]
+            ],
+            selected: ''
         }
     }
 
+    selectOption = (option) => {
+        this.setState({ selected: option });
+    }
+
     renderOptionBox(option) {
+
+        console.log(this.state.selected === option.type)
+
         return (
-            <div className={s.card}>
+            <div 
+                className={`
+                    ${s.card} 
+                    ${this.state.selected === option.type ? s.selected : null}
+                `}
+                onClick={this.selectOption.bind(this, option.type)}
+            >
                 <p className={s.header}>{option.type}</p>
                 <p>{option.desc}</p>
             </div>
