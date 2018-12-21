@@ -13,4 +13,8 @@
     flex-direction: row;
     align-items: center;
     height: 90%;
+
+    @media screen and (max-width: 520px) {
+        height: 75%;
+    }
 }

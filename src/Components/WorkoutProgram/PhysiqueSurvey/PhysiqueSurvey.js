@@ -11,22 +11,23 @@ class PhysiqueSurvey extends Component {
             options: [
                 {
                     type: 'Skinny',
-                    desc: ''
+                    desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.'
                 },
                 {
                     type: 'Skinny Fat',
-                    desc: ''
+                    desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.'
                 },
                 {
-                    type: 'Some Muscle and Some Fat',
-                    desc: ''
+                    type: 'Average',
+                    desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.'
                 },
                 {
                     type: 'Overweight',
-                    desc: ''
+                    desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.'
                 }
             ],
-            selected: ''
+            selected: '',
+            activeStep: 0
         }
     }
 
@@ -35,9 +36,6 @@ class PhysiqueSurvey extends Component {
     }
 
     renderOptionBox(option) {
-
-        console.log(this.state.selected === option.type)
-
         return (
             <div 
                 className={`
@@ -62,7 +60,6 @@ class PhysiqueSurvey extends Component {
                         })}
                     </div>
                 </div>
-
                 <div className={`row ${s.buttonContainer}`}>
                     <button type="button" class="btn btn-dark">
                         <span className={s.text}>Continue</span>
