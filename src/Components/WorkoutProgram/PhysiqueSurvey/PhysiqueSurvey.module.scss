@@ -1,16 +1,6 @@
 @import '../../../styles/common.module.scss';
 
-.physiqueSurveyContainer {
-}
-
-.optionBox {
-    height: 200px;
-    width: 50px;
-    border: thin solid black;
-}
-
 .scrollingWrapper {
-    // @extend .subtleShadowInset;
     margin-top: 30px;
     padding: 20px;
     text-align: center;
@@ -35,11 +25,24 @@
   
     .card {
         @extend .subtleShadow;
+        padding: 15px 13px;
         border-radius: 3px;
         flex: 0 0 auto;
         width: 220px;
         height: 220px;
         margin-left: 10px;
         margin-right: 10px;
+        border: 2px solid white;
+        transition: 0.2s;
+
+        &:hover {
+            border: 2px solid rgb(99, 99, 99);
+        }
+
+        .header {
+            font-size: 18px;
+            padding-bottom: 15px;
+            font-weight: bold;
+        }
     }
 }  

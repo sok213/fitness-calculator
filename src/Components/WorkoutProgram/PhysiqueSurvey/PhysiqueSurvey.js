@@ -17,7 +17,7 @@ class PhysiqueSurvey extends Component {
                 },
                 {
                     type: 'Some Muscle and Some Fat',
-                    desc: 'BLEH EBLEHI LEHIFOAfd safd sfds'
+                    desc: ''
                 },
                 {
                     type: 'Overweight',
@@ -30,7 +30,7 @@ class PhysiqueSurvey extends Component {
     renderOptionBox(option) {
         return (
             <div className={s.card}>
-                <p>{option.type}</p>
+                <p className={s.header}>{option.type}</p>
                 <p>{option.desc}</p>
             </div>
         )
