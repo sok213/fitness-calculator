@@ -1,0 +1,45 @@
+@import '../../../styles/common.module.scss';
+
+.physiqueSurveyContainer {
+}
+
+.optionBox {
+    height: 200px;
+    width: 50px;
+    border: thin solid black;
+}
+
+.scrollingWrapper {
+    // @extend .subtleShadowInset;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    text-align: center;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @media screen and (max-width: 1078px) {
+        border-left: thin solid rgb(206, 206, 206);
+        border-right: thin solid rgb(206, 206, 206);
+    }
+
+    .cardContainer {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  
+    .card {
+        @extend .subtleShadow;
+        border-radius: 3px;
+        flex: 0 0 auto;
+        width: 220px;
+        height: 220px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}  

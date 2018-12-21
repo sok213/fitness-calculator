@@ -1,0 +1,24 @@
+.fadeIn {
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+         -o-animation: fadein 1s; /* Opera < 12.1 */
+            animation: fadein 1s;
+}
+
+.subtleShadow {
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.09);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.09);
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.09);
+}
+
+.subtleShadowInset {
+    -webkit-box-shadow: inset 0px 0px 8px 4px rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0px 0px 8px 4px rgba(0,0,0,0.1);
+    box-shadow: inset 0px 0px 8px 4px rgba(0,0,0,0.1);
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

@@ -1,0 +1,36 @@
+@import './common.scss';
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+    line-height: 26px;
+    font-weight: 900;
+}
+
+.header {
+    color: rgb(54, 54, 54);
+    margin-bottom: 0px;
+
+    h2 {
+        color: white;
+    }
+}
+
+p {
+    @extend .fadeIn;
+    line-height: 22px;
+    color: rgb(54, 54, 54) ;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+    line-height: 26px;
+}
+
+.underline {
+    height: 4px;
+    width: 60px;
+    background-color: orange;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -6px;
+    border-radius: 10px;
+}

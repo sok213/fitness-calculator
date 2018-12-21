@@ -1,4 +1,9 @@
 .workoutProgramContainer {
     border: thin solid green;
     height: 100vh;
+    padding: 40px;
+
+    @media screen and (max-width: 520px) {
+        padding: 20px;
+    }
 }
