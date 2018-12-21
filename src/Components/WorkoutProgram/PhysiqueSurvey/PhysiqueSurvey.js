@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import s from './PhysiqueSurvey.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleRight, faUndoAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight, faUndoAlt } from '@fortawesome/free-solid-svg-icons';
 import { Animated } from "react-animated-css";
 
 class PhysiqueSurvey extends Component {
@@ -12,19 +12,19 @@ class PhysiqueSurvey extends Component {
             options: [
                 {
                     type: 'Skinny',
-                    desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.'
+                    desc: 'You have almost no muscles in sight and very minimal amount of fat on your body. You may have visible abs, but you are very thin and have no mass.'
                 },
                 {
                     type: 'Skinny Fat',
-                    desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.'
+                    desc: 'Your body consist of mostly skin with some blubber underneath with almost no muscle. You look as soft as a house cat.'
                 },
                 {
                     type: 'Average',
-                    desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.'
+                    desc: 'You don’t stand out in any way. You are not fat, neither muscular, just something in between.'
                 },
                 {
                     type: 'Overweight',
-                    desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.'
+                    desc: 'Your body consist of high body fat percentage. You are soft and heavy. You struggle to run a mile and your stomach pops out more than your chest.'
                 }
             ],
             selected: '',
@@ -83,7 +83,7 @@ class PhysiqueSurvey extends Component {
     step2 = () => {
         return (
             <div className={s.summaryContainer}>
-                <Animated animationIn="fadeIn" animationOut="fadeOut" kery={2}>
+                <Animated animationIn="fadeIn" animationOut="fadeOut" key={2}>
                     <h3>Summary</h3>
                     {this.renderSummary()}
                     <button 
@@ -132,7 +132,7 @@ class PhysiqueSurvey extends Component {
         } else if (this.state.selected === 'Overweight') {
             return (
                 <p>Overweight Summary</p>
-            )
+            );
         }
     }
 
