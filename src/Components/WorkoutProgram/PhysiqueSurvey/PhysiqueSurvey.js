@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import s from './PhysiqueSurvey.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faAngleRight, faUndoAlt } from '@fortawesome/free-solid-svg-icons'
+import { Animated } from "react-animated-css";
 
 class PhysiqueSurvey extends Component {
     constructor(props) {
@@ -53,26 +54,28 @@ class PhysiqueSurvey extends Component {
     step1 = () => {
         return (
             <div className={`${s.physiqueSurveyContainer}`}>
-                <div className={s.scrollingWrapper}>
-                    <div className={s.cardContainer}>
-                        {this.state.options.map((option) => {
-                            return this.renderOptionBox(option);
-                        })}
+                <Animated animationIn="fadeIn" animationOut="fadeOut" key={1}>
+                    <div className={s.scrollingWrapper}>
+                        <div className={s.cardContainer}>
+                            {this.state.options.map((option) => {
+                                return this.renderOptionBox(option);
+                            })}
+                        </div>
                     </div>
-                </div>
-                <div className={`row ${s.buttonContainer}`}>
-                    <button 
-                        type="button" 
-                        class="btn btn-dark"
-                        onClick={this.continue}    
-                    >
-                        <span className={s.text}>Continue</span>
-                        <FontAwesomeIcon 
-                            icon={faAngleRight} 
-                            className={s.rightIcon} 
-                        />
-                    </button>
-                </div>
+                    <div className={`row ${s.buttonContainer}`}>
+                        <button 
+                            type="button" 
+                            class="btn btn-dark"
+                            onClick={this.continue}    
+                        >
+                            <span className={s.text}>Continue</span>
+                            <FontAwesomeIcon 
+                                icon={faAngleRight} 
+                                className={s.rightIcon} 
+                            />
+                        </button>
+                    </div>
+                </Animated>
             </div>
         );
     }
@@ -80,18 +83,20 @@ class PhysiqueSurvey extends Component {
     step2 = () => {
         return (
             <div className={s.summaryContainer}>
-                <h3>Summary</h3>
-                {this.renderSummary()}
-                <button 
-                    type="button" 
-                    class="btn btn-dark"
-                    onClick={this.prevStep}
-                >
-                    <FontAwesomeIcon 
-                        icon={faAngleRight} 
-                        className={s.rightIcon} 
-                    />
-                </button>
+                <Animated animationIn="fadeIn" animationOut="fadeOut" kery={2}>
+                    <h3>Summary</h3>
+                    {this.renderSummary()}
+                    <button 
+                        type="button" 
+                        class="btn btn-dark"
+                        onClick={this.prevStep}
+                    >
+                        <FontAwesomeIcon 
+                            icon={faUndoAlt} 
+                            className={s.rightIcon} 
+                        />
+                    </button>
+                </Animated>
             </div>
         )
     }
