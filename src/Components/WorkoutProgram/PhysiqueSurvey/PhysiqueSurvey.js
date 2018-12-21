@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import s from './PhysiqueSurvey.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 class PhysiqueSurvey extends Component {
     constructor(props) {
@@ -45,6 +47,16 @@ class PhysiqueSurvey extends Component {
                             return this.renderOptionBox(option);
                         })}
                     </div>
+                </div>
+
+                <div className={`row ${s.buttonContainer}`}>
+                    <button type="button" class="btn btn-dark">
+                        <span className={s.text}>Continue</span>
+                        <FontAwesomeIcon 
+                            icon={faAngleRight} 
+                            className={s.rightIcon} 
+                        />
+                    </button>
                 </div>
             </div>
         )
