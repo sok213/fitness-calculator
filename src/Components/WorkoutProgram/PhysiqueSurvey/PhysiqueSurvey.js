@@ -27,7 +27,7 @@ class PhysiqueSurvey extends Component {
                 }
             ],
             selected: '',
-            activeStep: 0
+            activeStep: 1
         }
     }
 
@@ -50,7 +50,7 @@ class PhysiqueSurvey extends Component {
         )
     }
 
-    render() {
+    step1 = () => {
         return (
             <div className={`${s.physiqueSurveyContainer}`}>
                 <div className={s.scrollingWrapper}>
@@ -61,7 +61,11 @@ class PhysiqueSurvey extends Component {
                     </div>
                 </div>
                 <div className={`row ${s.buttonContainer}`}>
-                    <button type="button" class="btn btn-dark">
+                    <button 
+                        type="button" 
+                        class="btn btn-dark"
+                        onClick={this.continue}    
+                    >
                         <span className={s.text}>Continue</span>
                         <FontAwesomeIcon 
                             icon={faAngleRight} 
@@ -70,7 +74,65 @@ class PhysiqueSurvey extends Component {
                     </button>
                 </div>
             </div>
+        );
+    }
+
+    step2 = () => {
+        return (
+            <div className={s.summaryContainer}>
+                <h3>Summary</h3>
+                {this.renderSummary()}
+                <button 
+                    type="button" 
+                    class="btn btn-dark"
+                    onClick={this.prevStep}
+                >
+                    <FontAwesomeIcon 
+                        icon={faAngleRight} 
+                        className={s.rightIcon} 
+                    />
+                </button>
+            </div>
         )
+    }
+
+    continue = () => {
+        if(this.state.selected.length < 1) {
+            return null;
+        }
+
+        this.setState({ activeStep: 2 });
+    }
+
+    prevStep = () => {
+        this.setState({ 
+            activeStep: 1,
+            selected: ''
+        });
+    }
+
+    renderSummary = () => {
+        if(this.state.selected === 'Skinny') {
+            return (
+                <p>Skinny Summary</p>
+            );
+        } else if (this.state.selected === 'Skinny Fat') {
+            return (
+                <p>Skinny Fat Summary</p>
+            );
+        } else if (this.state.selected === 'Average') {
+            return (
+                <p>Average Summary</p>
+            );
+        } else if (this.state.selected === 'Overweight') {
+            return (
+                <p>Overweight Summary</p>
+            )
+        }
+    }
+
+    render() {
+        return this.state.activeStep === 1 ? this.step1() : this.step2();
     }
 }
 
