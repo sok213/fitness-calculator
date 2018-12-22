@@ -75,6 +75,22 @@
     }
 }
 
+.returnButtonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    button {
+        padding: 10px 20px;
+
+        .prevIcon {
+            font-size: 20px;
+            position: relative;
+            top: 2px;
+        }
+    }
+}
+
 .selected {
     border: 2px solid black !important;
 }

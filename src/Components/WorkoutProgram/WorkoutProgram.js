@@ -22,14 +22,15 @@ class WorkoutProgram extends Component {
     render() {
         return (
             <div  className={s.workoutProgramContainer}>
-                {this.state.activeSection < 2 && 
-                    <div className={`row`}>
-                        <div className={`col-md-8 col-lg-8 col-xl-6`}>
-                            <h2>One step to Mt. Olympus</h2>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                        </div>
+                <div 
+                    className={`row`} 
+                    style={{ opacity: this.state.activeSection < 2 ? '1' : '0' }}
+                >
+                    <div className={`col-md-8 col-lg-8 col-xl-6`}>
+                        <h2>One step to Mt. Olympus</h2>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                     </div>
-                }
+                </div>
                 <div className={`row ${s.survey}`}>
                     <div className={`col-lg-12`}>
                         <PhysiqueSurvey 

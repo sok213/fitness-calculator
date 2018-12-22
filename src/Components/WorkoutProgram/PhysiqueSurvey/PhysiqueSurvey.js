@@ -86,16 +86,19 @@ class PhysiqueSurvey extends Component {
                 <Animated animationIn="fadeIn" animationOut="fadeOut" key={2}>
                     <h3>Summary</h3>
                     {this.renderSummary()}
-                    <button 
-                        type="button" 
-                        class="btn btn-dark"
-                        onClick={this.prevStep}
-                    >
-                        <FontAwesomeIcon 
-                            icon={faUndoAlt} 
-                            className={s.rightIcon} 
-                        />
-                    </button>
+
+                    <div className={s.returnButtonContainer}>
+                        <button 
+                            type="button" 
+                            class="btn btn-dark"
+                            onClick={this.prevStep}
+                        >
+                            <FontAwesomeIcon 
+                                icon={faUndoAlt} 
+                                className={s.prevIcon} 
+                            />
+                        </button>
+                    </div>
                 </Animated>
             </div>
         )
@@ -129,9 +132,9 @@ class PhysiqueSurvey extends Component {
 
                     <ul>
                         <li>
-                            Protein
+                            Whey Protein
                             <ul>
-                                <li>Most ectomorphs have trouble eating more than they are used to. Protein may be used to supplement a meal to ensure you reach your daily protein intake goal without having to force down your last meal.</li>
+                                <li>Most ectomorphs have trouble eating more than they are used to. Whey Protein may be used to supplement a meal to ensure you reach your daily protein intake goal without having to force down your last meal.</li>
                             </ul>
                         </li>
                         <li>
