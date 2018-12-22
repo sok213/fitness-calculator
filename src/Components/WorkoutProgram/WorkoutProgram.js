@@ -43,7 +43,6 @@ class WorkoutProgram extends Component {
     }
 
     render() {
-        console.log('fuck: ', this.state.width);
 
         return (
             <div  
@@ -51,12 +50,12 @@ class WorkoutProgram extends Component {
                 style={{ height: this.isMobileAndStep2() }}    
             >
                 <div 
-                    className={`row`} 
+                    className={`row ${s.headerContent}`} 
                     style={{ display: this.state.activeSection < 2 ? 'block' : 'none' }}
                 >
-                    <div className={`col-md-8 col-lg-8 col-xl-6`}>
+                    <div className={`col-md-12 col-xl-6`}>
                         <h2>One step to Mt. Olympus</h2>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        <p>Mount Olympus is home of the Greek gods, the ones who posses the most aesthetic physiques known to man. It is believed that one must achieve an incredible aesthetic physique, and after death, they will forever live on the peak of Mount Olympus where they can train with the best equipment and drink from the fountain of gods that forever overflow with the best pre-workout known to give the best pumps. Here, you will be provided with the first step to discovering what type of workout regime you should begin based on your body type to maybe one day reach your aesthetic potential.</p>
                     </div>
                 </div>
                 <div className={`row ${s.survey}`}>

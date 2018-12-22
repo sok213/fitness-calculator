@@ -86,18 +86,19 @@ class PhysiqueSurvey extends Component {
                 <Animated animationIn="fadeIn" animationOut="fadeOut" key={2}>
                     <h3>Summary</h3>
                     {this.renderSummary()}
-
-                    <div className={s.returnButtonContainer}>
-                        <button 
-                            type="button" 
-                            class="btn btn-dark"
-                            onClick={this.prevStep}
-                        >
-                            <FontAwesomeIcon 
-                                icon={faUndoAlt} 
-                                className={s.prevIcon} 
-                            />
-                        </button>
+                    <div className={`row`}>
+                        <div className={s.returnButtonContainer}>
+                            <button 
+                                type="button" 
+                                class="btn btn-dark"
+                                onClick={this.prevStep}
+                            >
+                                <FontAwesomeIcon 
+                                    icon={faUndoAlt} 
+                                    className={s.prevIcon} 
+                                />
+                            </button>
+                        </div>
                     </div>
                 </Animated>
             </div>
@@ -123,7 +124,7 @@ class PhysiqueSurvey extends Component {
     renderSummary = () => {
         if(this.state.selected === 'Skinny') {
             return (
-                <div>   
+                <div className={`row`}>   
                     <p>The best workout program skinny body types seeking to achieve an aesthetic physique is to focus on building muscle mass and not worry too much on burning calories. Workouts should primarily consist of heavy major lifts such as deadlifts, bench press, squats, along with body weight exercises such as push-ups and pull-ups. Cardio should be kept to a minimal since the focus is to gain weight in order to build a stronger and more massive body.</p>
 
                     <p>Diet is very crucial to making sure your body properly recovers after a workout, especially when you want to make muscle gains. Your diet should consist of a caloric surplus which means that you are consuming more calories than your current caloric maintenance. Nutrition should be heavy in protein and healthy fats.</p>
