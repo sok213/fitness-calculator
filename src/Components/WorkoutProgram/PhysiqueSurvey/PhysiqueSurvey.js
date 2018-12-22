@@ -105,11 +105,12 @@ class PhysiqueSurvey extends Component {
         if(this.state.selected.length < 1) {
             return null;
         }
-
+        this.props.nextStep();
         this.setState({ activeStep: 2 });
     }
 
     prevStep = () => {
+        this.props.prevStep();
         this.setState({ 
             activeStep: 1,
             selected: ''
@@ -119,7 +120,28 @@ class PhysiqueSurvey extends Component {
     renderSummary = () => {
         if(this.state.selected === 'Skinny') {
             return (
-                <p>Skinny Summary</p>
+                <div>   
+                    <p>The best workout program skinny body types seeking to achieve an aesthetic physique is to focus on building muscle mass and not worry too much on burning calories. Workouts should primarily consist of heavy major lifts such as deadlifts, bench press, squats, along with body weight exercises such as push-ups and pull-ups. Cardio should be kept to a minimal since the focus is to gain weight in order to build a stronger and more massive body.</p>
+
+                    <p>Diet is very crucial to making sure your body properly recovers after a workout, especially when you want to make muscle gains. Your diet should consist of a caloric surplus which means that you are consuming more calories than your current caloric maintenance. Nutrition should be heavy in protein and healthy fats.</p>
+
+                    <p>Supplements are a tool to boosts your efficiency in getting results and feeling better. For skinny body types who are trying to build muscle and mass, we recommend the following products:</p>
+
+                    <ul>
+                        <li>
+                            Protein
+                            <ul>
+                                <li>Most ectomorphs have trouble eating more than they are used to. Protein may be used to supplement a meal to ensure you reach your daily protein intake goal without having to force down your last meal.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Vitamin D3
+                            <ul>
+                                <li>Around 43% of people in the United States are vitamin D deficient, which means that there is a decent chance that you may be too. Vitamin D is crucial for testosterone production and testosterone is the key to having effective workouts and muscle development. Vitamin D3 can assist your production in testosterone and improve your energy in and out of the gym. Overall, it’s good for your health and if you’re trying to build your muscles and grow your body, this is one supplement that could significantly help.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             );
         } else if (this.state.selected === 'Skinny Fat') {
             return (
