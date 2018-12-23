@@ -175,7 +175,35 @@ class PhysiqueSurvey extends Component {
             );
         } else if (this.state.selected === 'Average') {
             return (
-                <p>Average Overview</p>
+                <div className={`${s.summaryContent} col-md-12 col-xl-6`}>   
+                    <h3>Average Overview</h3>
+                    <p>The best workout program for average body types that consists of some fat and some muscle is a routine that incorporates high repetition sets with medium weights. An average body type should have a decent amount of muscle, so shredding off excess stubborn fat and increasing vascularity should be the most efficient route to achieve an aesthetic physique. Workouts should primarily consist of high rep body weight exercises such as weighted pull-ups and pushups along with isolation movements such as bicep curls, bench press, and shoulder-presses. Some cardio in combination with intermittent fasting should speed up the fat burning process. Abs should be worked on at least 3 times a week.</p>
+
+                    <p>Diet should consist of high protein, low carbs, and low fat. It is crucial to keep the carbs low for an average body type in order to get rid of the stubborn belly fat and achieve the shredded vascular look. Stay away from dairy products like milk, cheese, and pasta since those are generally the type of foods to get you bloated and difficult to get rid of stubborn belly fat.</p>
+
+                    <p>Supplements are a tool to boosts your efficiency in getting results and feeling better. For average body types who are trying to build muscle and lose stubborn fat, we recommend the following products:</p>
+
+                    <ul>
+                        <li>
+                            Pre-Workout
+                            <ul>
+                                <li>Pre-Workout is an amazing supplement to boost your energy in the gym and many contain fat burning ingredients to help with getting leaner and vascular.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Whey Protein
+                            <ul>
+                                <li>Whey Protein can help you reach your daily protein intake goal easier if you supplement a meal with a protein shake.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Black Coffee
+                            <ul>
+                                <li>Black coffee is great for fat loss when used in combination with intermittent fasting. Black coffee is not only great for speeding up metabolism, but also a good hunger suppressant. Perfect supplement for someone looking to lose weight and achieve a tighter waist.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             );
         } else if (this.state.selected === 'Overweight') {
             return (
