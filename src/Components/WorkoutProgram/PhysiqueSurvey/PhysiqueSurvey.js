@@ -124,7 +124,7 @@ class PhysiqueSurvey extends Component {
         if(this.state.selected === 'Skinny') {
             return (
                 <div className={`${s.summaryContent} col-md-12 col-xl-6`}>   
-                    <h3>Summary</h3>
+                    <h3>Skinny Overview</h3>
                     <p>The best workout program skinny body types seeking to achieve an aesthetic physique is to focus on building muscle mass and not worry too much on burning calories. Workouts should primarily consist of heavy major lifts such as deadlifts, bench press, squats, along with body weight exercises such as push-ups and pull-ups. Cardio should be kept to a minimal since the focus is to gain weight in order to build a stronger and more massive body.</p>
 
                     <p>Diet is very crucial to making sure your body properly recovers after a workout, especially when you want to make muscle gains. Your diet should consist of a caloric surplus which means that you are consuming more calories than your current caloric maintenance. Nutrition should be heavy in protein and healthy fats.</p>
@@ -150,7 +150,7 @@ class PhysiqueSurvey extends Component {
         } else if (this.state.selected === 'Skinny Fat') {
             return (
                 <div className={`${s.summaryContent} col-md-12 col-xl-6`}>   
-                    <h3>Summary</h3>
+                    <h3>Skinny Fat Overview</h3>
                     <p>The best workout program for skinny fat body types seeking to achieve an aesthetic physique is to focus on both building muscle and burning fat. The goal should be to build a good amount of muscle and to also decrease your overall body fat percentage. Fortunately, building muscle is an efficient way to also burn fat. Workouts should primarily consist of heavy major lifts such as deadlifts, bench press, squats, along with body weight exercises such as push-ups and pull-ups. Some cardio should be added to your workouts to help burn calories and improve metabolism.</p>
 
                     <p>Diet should be protein heavy, keep the fats to a medium, and make sure that you are consuming a minimal amount of carbs. Calories should be slightly above your current maintenance calories for muscle recovery and strength gains. One amazing tool that would greatly make your fat loss more efficient is to incorporate intermittent fasting and consider black coffee in the morning. This strategy is a great dietary supplement to burn calories and it works great to hit the gym while on an empty stomach for extra focus and efficient fat loss.</p>
@@ -175,11 +175,11 @@ class PhysiqueSurvey extends Component {
             );
         } else if (this.state.selected === 'Average') {
             return (
-                <p>Average Summary</p>
+                <p>Average Overview</p>
             );
         } else if (this.state.selected === 'Overweight') {
             return (
-                <p>Overweight Summary</p>
+                <p>Overweight Overview</p>
             );
         }
     }
