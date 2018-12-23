@@ -39,7 +39,7 @@ class WorkoutProgram extends Component {
     }
 
     isMobileAndStep2 = () => {
-        if(this.state.activeSection == 2 && this.state.width < 999) {
+        if(this.state.activeSection === 2 && this.state.width < 999) {
             return '100%';
         }
     }

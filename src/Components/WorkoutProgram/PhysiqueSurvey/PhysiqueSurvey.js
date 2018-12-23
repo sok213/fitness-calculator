@@ -207,7 +207,29 @@ class PhysiqueSurvey extends Component {
             );
         } else if (this.state.selected === 'Overweight') {
             return (
-                <p>Overweight Overview</p>
+                <div className={`${s.summaryContent} col-md-12 col-xl-6`}>   
+                    <h3>Overweight Overview</h3>
+                    <p>The best workout program for overweight body types that consists of mostly fat is a routine that incorporates high repetition sets with light weights along with fasted cardio. Body weight exercises such as body squats, push-ups, pull-ups, and lunges are great since your body is already heavy and you can use your own body weight to build muscle and burn fat.</p>
+
+                    <p>Diet is the most crucial aspect for overweight body types. Make sure you are in a constant caloric deficit and incorporate intermittent fasting for great fat loss results and improved metabolism. Nutrition should consist of clean protein coming from meat that is fresh and not fried. Carbs should be kept to a minimum along with fats. Stay away from cheese, pasta, and any high fructose processed foods.</p>
+
+                    <p>Supplements are a tool to boosts your efficiency in getting results and feeling better. For overweight body types who are trying to build muscle and lose lots of fat, we recommend the following products:</p>
+
+                    <ul>
+                        <li>
+                            Pre-Workout
+                            <ul>
+                                <li>Pre-Workout is an amazing supplement to boost your energy in the gym and many contain fat burning ingredients to help with getting leaner and vascular.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Black Coffee
+                            <ul>
+                                <li>Black coffee is great for fat loss when used in combination with intermittent fasting. Black coffee is not only great for speeding up metabolism, but also a good hunger suppressant. Perfect supplement for someone looking to lose weight and achieve a tighter waist.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             );
         }
     }
