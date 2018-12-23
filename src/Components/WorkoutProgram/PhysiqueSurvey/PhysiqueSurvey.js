@@ -149,7 +149,29 @@ class PhysiqueSurvey extends Component {
             );
         } else if (this.state.selected === 'Skinny Fat') {
             return (
-                <p>Skinny Fat Summary</p>
+                <div className={`${s.summaryContent} col-md-12 col-xl-6`}>   
+                    <h3>Summary</h3>
+                    <p>The best workout program for skinny fat body types seeking to achieve an aesthetic physique is to focus on both building muscle and burning fat. The goal should be to build a good amount of muscle and to also decrease your overall body fat percentage. Fortunately, building muscle is an efficient way to also burn fat. Workouts should primarily consist of heavy major lifts such as deadlifts, bench press, squats, along with body weight exercises such as push-ups and pull-ups. Some cardio should be added to your workouts to help burn calories and improve metabolism.</p>
+
+                    <p>Diet should be protein heavy, keep the fats to a medium, and make sure that you are consuming a minimal amount of carbs. Calories should be slightly above your current maintenance calories for muscle recovery and strength gains. One amazing tool that would greatly make your fat loss more efficient is to incorporate intermittent fasting and consider black coffee in the morning. This strategy is a great dietary supplement to burn calories and it works great to hit the gym while on an empty stomach for extra focus and efficient fat loss.</p>
+
+                    <p>Supplements are a tool to boosts your efficiency in getting results and feeling better. For skinny fat body types who are trying to build muscle and lose stubborn fat, we recommend the following products:</p>
+
+                    <ul>
+                        <li>
+                            Whey Protein
+                            <ul>
+                                <li>Whey Protein can help you reach your daily protein intake goal easier if you supplement a meal with a protein shake.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Pre-Workout 
+                            <ul>
+                                <li>Pre-Workout is an amazing supplement to boost your energy in the gym and many contain fat burning ingredients to help with getting leaner and vascular.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             );
         } else if (this.state.selected === 'Average') {
             return (
