@@ -16,7 +16,7 @@ h1, h2, h3, h4 {
     }
 }
 
-p {
+p, ul, li {
     @extend .fadeIn;
     line-height: 22px;
     color: rgb(54, 54, 54) ;
