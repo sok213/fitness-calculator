@@ -11,6 +11,10 @@
     }
 }
 
+.headerTitle {
+    font-size: 28px;
+}
+
 .survey {
     display: flex;
     flex-direction: row;
@@ -26,5 +30,5 @@
     margin-left: 20px;
     position: relative;
     top: -4px;
-    font-size: 40px;
+    font-size: 30px;
 }
