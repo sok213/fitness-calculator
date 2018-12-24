@@ -15,7 +15,7 @@ class Banner extends Component {
                     <div className={`col-lg-12 ${s.header}`}>
                         <div className={s.headerContent}>
                             <h1>Are you ready to reach your <span className={s.aesthetic}>aesthetic</span> potential?</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>You have one life to live and a life should never be lived without ever experiencing your fullest potential. Your physique is a symbol of your lifestyle and who you are as a person. For some, it may take harder work than others, but generally speaking, everyone can achieve an amazing healthy physique that could drastically improve their life and well-being. Here, you will find simple guidance on how to embark on your first step to reaching your aesthetic potential.</p>
                         </div>
                     </div>
                 </div>
