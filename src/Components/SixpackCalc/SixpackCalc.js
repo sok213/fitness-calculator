@@ -143,7 +143,7 @@ class SixpackCalc extends Component {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 
     render() {
