@@ -33,10 +33,15 @@ class SixpackCalc extends Component {
         this.setState({ weight: e.target.value });
     }
 
+    helpCta = (e) => {
+        e.preventDefault();
+        this.setState({ activeSection: 3 });
+    }
+
     renderSection1 = () => {
         return (
-            <div  className={`${s.sixPackCalcContainer}`}>
-                <div className={`row ${s.headerContent}`}>
+            <div  className={`${s.sixPackCalcContainer}`} key={1}>
+                <div className={`row ${s.headerContent}`} key={1}>
                     <div className={`col-md-12 col-xl-6`}>
                         <h3>Abdominal Pack Forteller</h3>
                         <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
@@ -56,6 +61,7 @@ class SixpackCalc extends Component {
                                     onChange={this.handleBodyFatPercChange}
                                     required
                                 />
+                                <span><small><a href="#" onClick={this.helpCta.bind(this)}>I need help finding my body fat percentage</a></small></span>
                             </div>
                             <div class="form-group">
                                 <label for="age">Age</label>
@@ -92,27 +98,20 @@ class SixpackCalc extends Component {
     }
 
     renderSection2 = () => {
-
-        // TODO: 
-        // 3) Calculate Time to six pack.
-        // 4) Generate Conclusion.
-
+        // TODO: Generate Conclusion.
         const weight = this.state.weight;
         const bfp = this.state.bodyFatPerc;
         const currentLeanBodyMass = Math.round(weight * (1 - (bfp * 0.01)));
         const goalLeanBodyMass = currentLeanBodyMass * 0.97;
         const goalWeight = Math.round(goalLeanBodyMass / (1 - 0.12));
-
         const rateOfWeightLossPerWeek = Math.round(weight * 0.005);
         const rateOfWeightLossPerWeekIntense = Math.round(weight * 0.01);
-
         const tt6 = Math.round((weight - goalWeight) / rateOfWeightLossPerWeek);
-
         const tt6V2 = Math.round((weight - goalWeight) / rateOfWeightLossPerWeekIntense);
 
         return (
-            <div  className={`${s.sixPackCalcContainer}`}>
-                <div className={`row ${s.summaryContainer}`}> 
+            <div  className={`${s.sixPackCalcContainer}`} key={2}>
+                <div className={`row ${s.summaryContainer}`} key={2}> 
                     <div className={`col-md-12 col-xl-6`}>
                         <h3>Abdominal Pack Forteller</h3>
                         <p>Provided Stats: </p>
@@ -134,8 +133,27 @@ class SixpackCalc extends Component {
         );
     }
 
+    renderHelpFindBfp() {
+        return (
+            <div  className={`${s.sixPackCalcContainer}`} key={3}>
+                <div className={`row ${s.headerContent}`} key={3}>
+                    <div className={`col-md-12 col-xl-6`}>
+                        <h3>How to Find Body Fat Percentage</h3>
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
     render() {
-        return this.state.activeSection === 1 ? this.renderSection1() : this.renderSection2();
+        if(this.state.activeSection === 1) {
+            return this.renderSection1();
+        } else if (this.state.activeSection === 2) {
+            return this.renderSection2();
+        } else if  (this.state.activeSection === 3) {
+            return this.renderHelpFindBfp();
+        }
     }
 }
 
