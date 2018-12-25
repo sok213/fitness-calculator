@@ -103,9 +103,12 @@ class SixpackCalc extends Component {
         const goalLeanBodyMass = currentLeanBodyMass * 0.97;
         const goalWeight = Math.round(goalLeanBodyMass / (1 - 0.12));
 
-        const rateOfWeightLossPerWeek = weight * 0.005;
+        const rateOfWeightLossPerWeek = Math.round(weight * 0.005);
+        const rateOfWeightLossPerWeekIntense = Math.round(weight * 0.01);
 
         const tt6 = Math.round((weight - goalWeight) / rateOfWeightLossPerWeek);
+
+        const tt6V2 = Math.round((weight - goalWeight) / rateOfWeightLossPerWeekIntense);
 
         return (
             <div  className={`${s.sixPackCalcContainer}`}>
@@ -123,6 +126,7 @@ class SixpackCalc extends Component {
                             <li>Lean Body Mass: {currentLeanBodyMass}</li>
                             <li>Goal Weight: {goalWeight}</li>
                             <li>Time to Six Pack: {tt6} weeks ({Math.round(tt6 / 4)} months) at a rate of losing {rateOfWeightLossPerWeek} pounds per week.</li>
+                            <li>Time to Six Pack Intense: {tt6V2} weeks ({Math.round(tt6V2 / 4)} months) at a rate of losing {rateOfWeightLossPerWeekIntense} pounds per week.</li>
                         </ul>
                     </div>
                 </div>
