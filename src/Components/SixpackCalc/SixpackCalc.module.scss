@@ -9,12 +9,15 @@
 }
 
 .headerContent {
-    text-align: center;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-
     h3 {
         margin-bottom: 20px;
     }
+}
+
+.formContainer {
+    padding: 10px 25px;
+    max-width: 580px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
