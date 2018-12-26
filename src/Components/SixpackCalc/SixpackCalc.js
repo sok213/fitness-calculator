@@ -43,7 +43,7 @@ class SixpackCalc extends Component {
                 <div className={`row ${s.headerContent}`} key={1}>
                     <div className={`col-md-12 col-xl-6`}>
                         <h3>Abdominal Pack Foreteller</h3>
-                        <p>Having visible abs is one of the most crucial components that determines whether a physique is aesthetic or just average. It’s can be difficult to do your own research to figure out how much weight to lose to have your abs show. Fortunately, we have created a tool to make your life easier! Our sophisticated Abdominal Pack Foreteller tool will calculate how much weight you need to lose and how many weeks it will take for you to obtain visible abs based on your current body stats.</p>
+                        <p>Having visible abs is one of the most crucial components that determines whether a physique is aesthetic or just average. It can be difficult to do your own research to figure out how much weight to lose to have your abs show. Fortunately, we have created a tool to make your life easier! Our sophisticated Abdominal Pack Foreteller tool will calculate how much weight you need to lose and how many weeks it will take for you to obtain visible abs based on your current body stats.</p>
                     </div>
                 </div>
                 <div className={`row ${s.calculator}`}>
@@ -70,18 +70,6 @@ class SixpackCalc extends Component {
                                         </a>
                                     </small>
                                 </span>
-                            </div>
-                            <div class="form-group">
-                                <label for="age">Age</label>
-                                <input 
-                                    type="number" 
-                                    class="form-control" 
-                                    id="age" 
-                                    placeholder="Enter your age"
-                                    value={this.state.age}
-                                    onChange={this.handleAgeChange}
-                                    required
-                                />
                             </div>
                             <div class="form-group">
                                 <label for="weight">Weight</label>
@@ -120,26 +108,16 @@ class SixpackCalc extends Component {
         const rateOfWeightLossPerWeek = Math.round(weight * 0.005);
         const rateOfWeightLossPerWeekIntense = Math.round(weight * 0.01);
         const tt6 = Math.round((weight - goalWeight) / rateOfWeightLossPerWeek);
+        const tt6Months = Math.round(tt6 / 4);
         const tt6V2 = Math.round((weight - goalWeight) / rateOfWeightLossPerWeekIntense);
+        const tt6V2Months = Math.round(tt6V2 / 4);
 
         return (
             <div className={`${s.sixPackCalcContainer}`} key={2}>
-                <div className={`row ${s.summaryContainer}`} key={2}> 
-                    <div className={`col-md-12 col-xl-6`}>
-                        <h3>Abdominal Pack Foreteller</h3>
-                        <p>Provided Stats: </p>
-                        <ul>
-                            <li>Age: {this.state.age}</li>
-                            <li>Body Fat: {this.state.bodyFatPerc}</li>
-                            <li>Weight: {this.state.weight}</li>
-                        </ul>
-                        <p>Results:</p>
-                        <ul>
-                            <li>Lean Body Mass: {currentLeanBodyMass}</li>
-                            <li>Goal Weight: {goalWeight}</li>
-                            <li>Time to Six Pack: {tt6} weeks ({Math.round(tt6 / 4)} months) at a rate of losing {rateOfWeightLossPerWeek} pounds per week.</li>
-                            <li>Time to Six Pack Intense: {tt6V2} weeks ({Math.round(tt6V2 / 4)} months) at a rate of losing {rateOfWeightLossPerWeekIntense} pounds per week.</li>
-                        </ul>
+                <div className={`row`} key={2}> 
+                    <div className={`col-md-12 ${s.summaryContainer}`}>
+                        <h3>Abdominal Pack Fortold</h3>
+                        <p>Your lean body mass is <span className={s.boldMe}>{currentLeanBodyMass}</span> pounds which means that your goal weight for well defined abs would be {goalWeight}. The recommended rate of weight loss would be <span className={s.boldMe}>{rateOfWeightLossPerWeek}</span> pounds per week which would take <span className={s.boldMe}>{tt6} weeks</span> or <span className={s.boldMe}>{tt6Months} months</span> to obtain well defined abs. If you want to obtain your abs a bit faster with more intense dieting and exercise, the recommended rate of weight loss would be <span className={s.boldMe}>{rateOfWeightLossPerWeekIntense}</span> pounds per week which would take <span className={s.boldMe}>{tt6V2}</span> weeks or <span className={s.boldMe}>{tt6V2Months} months</span> to obtain well defined abs.</p>
                     </div>
                 </div>
             </div>
