@@ -43,7 +43,7 @@ class SixpackCalc extends Component {
                 <div className={`row ${s.headerContent}`} key={1}>
                     <div className={`col-md-12 col-xl-6`}>
                         <h3>Abdominal Pack Foreteller</h3>
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+                        <p>Having visible abs is one of the most crucial components that determines whether a physique is aesthetic or just average. It’s can be difficult to do your own research to figure out how much weight to lose to have your abs show. Fortunately, we have created a tool to make your life easier! Our sophisticated Abdominal Pack Foreteller tool will calculate how much weight you need to lose and how many weeks it will take for you to obtain visible abs based on your current body stats.</p>
                     </div>
                 </div>
                 <div className={`row ${s.calculator}`}>
