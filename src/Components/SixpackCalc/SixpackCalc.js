@@ -17,7 +17,6 @@ class SixpackCalc extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        console.log('Form has been submitted.');
         this.setState({ activeSection: 2 });
     }
 
@@ -40,10 +39,10 @@ class SixpackCalc extends Component {
 
     renderSection1 = () => {
         return (
-            <div  className={`${s.sixPackCalcContainer}`} key={1}>
+            <div className={`${s.sixPackCalcContainer}`} key={1}>
                 <div className={`row ${s.headerContent}`} key={1}>
                     <div className={`col-md-12 col-xl-6`}>
-                        <h3>Abdominal Pack Forteller</h3>
+                        <h3>Abdominal Pack Foreteller</h3>
                         <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
                     </div>
                 </div>
@@ -61,7 +60,16 @@ class SixpackCalc extends Component {
                                     onChange={this.handleBodyFatPercChange}
                                     required
                                 />
-                                <span><small><a href="#" onClick={this.helpCta.bind(this)}>I need help finding my body fat percentage</a></small></span>
+                                <span>
+                                    <small>
+                                        <a
+                                            href="#" 
+                                            onClick={this.helpCta.bind(this)}
+                                        >
+                                            I need help finding my body fat percentage
+                                        </a>
+                                    </small>
+                                </span>
                             </div>
                             <div class="form-group">
                                 <label for="age">Age</label>
@@ -88,7 +96,12 @@ class SixpackCalc extends Component {
                                 />
                             </div>
                             <div className={s.buttonContainer}>
-                                <button type="submit" class={`btn btn-primary ${s.submitCta}`}>See Results</button>
+                                <button 
+                                    type="submit" 
+                                    class={`btn btn-primary ${s.submitCta}`}
+                                >
+                                    See Results
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -110,10 +123,10 @@ class SixpackCalc extends Component {
         const tt6V2 = Math.round((weight - goalWeight) / rateOfWeightLossPerWeekIntense);
 
         return (
-            <div  className={`${s.sixPackCalcContainer}`} key={2}>
+            <div className={`${s.sixPackCalcContainer}`} key={2}>
                 <div className={`row ${s.summaryContainer}`} key={2}> 
                     <div className={`col-md-12 col-xl-6`}>
-                        <h3>Abdominal Pack Forteller</h3>
+                        <h3>Abdominal Pack Foreteller</h3>
                         <p>Provided Stats: </p>
                         <ul>
                             <li>Age: {this.state.age}</li>
@@ -135,7 +148,7 @@ class SixpackCalc extends Component {
 
     renderHelpFindBfp() {
         return (
-            <div  className={`${s.sixPackCalcContainer}`} key={3}>
+            <div className={`${s.sixPackCalcContainer}`} key={3}>
                 <div className={`row ${s.headerContent}`} key={3}>
                     <div className={`col-md-12 col-xl-6`}>
                         <h3>How to Find Body Fat Percentage</h3>
