@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import s from './SixpackCalc.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUndoAlt } from '@fortawesome/free-solid-svg-icons';
+import { Animated } from "react-animated-css";
 
 class SixpackCalc extends Component {
 
@@ -48,50 +51,52 @@ class SixpackCalc extends Component {
                 </div>
                 <div className={`row ${s.calculator}`}>
                     <div className={s.formContainer}>
-                        <form onSubmit={this.onSubmit.bind(this)}>
-                            <div class="form-group">
-                                <label for="bodyfatperc">Body Fat Percentage</label>
-                                <input 
-                                    type="number" 
-                                    class="form-control" 
-                                    id="bodyfatperc" 
-                                    placeholder="Enter body fat %"
-                                    value={this.state.bodyFatPerc}
-                                    onChange={this.handleBodyFatPercChange}
-                                    required
-                                />
-                                <span>
-                                    <small>
-                                        <a
-                                            href="/" 
-                                            onClick={this.helpCta.bind(this)}
-                                        >
-                                            I need help finding my body fat percentage
-                                        </a>
-                                    </small>
-                                </span>
-                            </div>
-                            <div class="form-group">
-                                <label for="weight">Weight</label>
-                                <input 
-                                    type="number" 
-                                    class="form-control" 
-                                    id="weight" 
-                                    placeholder="Enter your weight"
-                                    value={this.state.weight}
-                                    onChange={this.handleWeightChange}
-                                    required
-                                />
-                            </div>
-                            <div className={s.buttonContainer}>
-                                <button 
-                                    type="submit" 
-                                    class={`btn btn-primary ${s.submitCta}`}
-                                >
-                                    See Results
-                                </button>
-                            </div>
-                        </form>
+                        <Animated animationIn="fadeIn" animationOut="fadeOut" key={1}>
+                            <form onSubmit={this.onSubmit.bind(this)}>
+                                <div class="form-group">
+                                    <label for="bodyfatperc">Body Fat Percentage</label>
+                                    <input 
+                                        type="number" 
+                                        class="form-control" 
+                                        id="bodyfatperc" 
+                                        placeholder="Enter body fat %"
+                                        value={this.state.bodyFatPerc}
+                                        onChange={this.handleBodyFatPercChange}
+                                        required
+                                    />
+                                    <span>
+                                        <small>
+                                            <a
+                                                href="/" 
+                                                onClick={this.helpCta.bind(this)}
+                                            >
+                                                I need help finding my body fat percentage
+                                            </a>
+                                        </small>
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="weight">Weight</label>
+                                    <input 
+                                        type="number" 
+                                        class="form-control" 
+                                        id="weight" 
+                                        placeholder="Enter your weight"
+                                        value={this.state.weight}
+                                        onChange={this.handleWeightChange}
+                                        required
+                                    />
+                                </div>
+                                <div className={s.buttonContainer}>
+                                    <button 
+                                        type="submit" 
+                                        class={`btn btn-primary ${s.submitCta}`}
+                                    >
+                                        See Results
+                                    </button>
+                                </div>
+                            </form>
+                        </Animated>
                     </div>
                 </div>
             </div>
@@ -133,6 +138,20 @@ class SixpackCalc extends Component {
                         <p>Your lean body mass is <span className={s.boldMe}>{currentLeanBodyMass}</span> pounds which means that your goal weight to obtain well defined abs would be {goalWeight} pounds. The recommended rate of weight loss would be <span className={s.boldMe}>{rateOfWeightLossPerWeek}</span> pounds per week which would take <span className={s.boldMe}>{tt6} weeks</span> or <span className={s.boldMe}>{tt6Months} months</span>. If you want to obtain your abs a bit faster with more intense dieting and exercise, the recommended rate of weight loss would be <span className={s.boldMe}>{rateOfWeightLossPerWeekIntense}</span> pounds per week which would take <span className={s.boldMe}>{tt6V2}</span> weeks or <span className={s.boldMe}>{tt6V2Months} months</span> to obtain well defined abs and become aesthetic.</p>
                     </div>
                 </div>
+                <div className={`row`} key={2}>
+                    <div className={s.returnButtonContainer}>
+                        <button 
+                            type="button" 
+                            class="btn btn-dark"
+                            onClick={this.prevStep}
+                        >
+                            <FontAwesomeIcon 
+                                icon={faUndoAlt} 
+                                className={s.prevIcon} 
+                            />
+                        </button>
+                    </div>
+                </div>
             </div>
         );
     }
@@ -148,6 +167,10 @@ class SixpackCalc extends Component {
                 </div>
             </div>
         );
+    }
+
+    prevStep = () => {
+        this.setState({ activeSection: 1});
     }
 
     render() {
