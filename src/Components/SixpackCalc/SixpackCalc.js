@@ -64,7 +64,7 @@ class SixpackCalc extends Component {
                                         onChange={this.handleBodyFatPercChange}
                                         required
                                     />
-                                    <span>
+                                    <div className={s.helpCta}>
                                         <small>
                                             <a
                                                 href="/" 
@@ -73,7 +73,7 @@ class SixpackCalc extends Component {
                                                 I need help finding my body fat percentage
                                             </a>
                                         </small>
-                                    </span>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="weight">Weight</label>
