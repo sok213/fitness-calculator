@@ -63,7 +63,7 @@ class SixpackCalc extends Component {
                                 <span>
                                     <small>
                                         <a
-                                            href="#" 
+                                            href="/" 
                                             onClick={this.helpCta.bind(this)}
                                         >
                                             I need help finding my body fat percentage
@@ -112,6 +112,19 @@ class SixpackCalc extends Component {
         const tt6V2 = Math.round((weight - goalWeight) / rateOfWeightLossPerWeekIntense);
         const tt6V2Months = Math.round(tt6V2 / 4);
 
+
+        if(currentLeanBodyMass >= goalWeight || bfp < 13) {
+            return (
+                <div className={`${s.sixPackCalcContainer}`} key={2}>
+                    <div className={`row`} key={2}> 
+                        <div className={`col-md-12 ${s.summaryContainer}`}>
+                            <h3>Abdominal Pack Fortold</h3>
+                            <p>Your lean body mass is <span className={s.boldMe}>{currentLeanBodyMass}</span> and your body fat percentage is <span className={s.boldMe}>{bfp}%</span> which means that you should already have visible defined abs. You should not consider losing anymore weight! If you do not have visible abs, perhaps you should eat more food and lift heavier weights.</p>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
         return (
             <div className={`${s.sixPackCalcContainer}`} key={2}>
                 <div className={`row`} key={2}> 
