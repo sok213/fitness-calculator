@@ -21,14 +21,17 @@ class Banner extends Component {
                 </div>
                 <div className={`row`} style={{ textAlign: 'center'}}>
                     <div className={`col-lg-12 ${s.getStartedCta}`}>
-                        <button 
-                            type="button" 
-                            className={`btn btn-dark ${s.startCta}`}
-                        >
-                            <FontAwesomeIcon icon={faChevronDown} className={s.downIcon} />
-                        </button>
+                        <a href="#workout">
+                            <button 
+                                type="button" 
+                                className={`btn btn-dark ${s.startCta}`}
+                            >
+                                <FontAwesomeIcon icon={faChevronDown} className={s.downIcon} />
+                            </button>
+                        </a>
                     </div>
                 </div>
+                <a name="workout"></a>
             </div>
         );
     }

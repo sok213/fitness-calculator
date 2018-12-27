@@ -2,6 +2,7 @@ body, html {
   margin: 0;
   padding: 0;
   animation: fadein 1s;
+  scroll-behavior: smooth;
 }
 
 @keyframes fadein {

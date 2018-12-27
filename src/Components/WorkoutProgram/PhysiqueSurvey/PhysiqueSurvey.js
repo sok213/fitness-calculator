@@ -27,7 +27,7 @@ class PhysiqueSurvey extends Component {
                     desc: 'Your body consist of high body fat percentage. You are soft and heavy. You struggle to run a mile and your stomach pops out more than your chest.'
                 }
             ],
-            selected: '',
+            selected: null,
             activeStep: 1
         }
     }
@@ -62,16 +62,20 @@ class PhysiqueSurvey extends Component {
                             })}
                         </div>
                     </div>
-                    <div className={`row ${s.buttonContainer}`}>
+                    <div className={`
+                        row 
+                        ${s.buttonContainer} 
+                    `}>
                         <button 
                             type="button" 
-                            class="btn btn-dark"
-                            onClick={this.continue}    
+                            class={`btn btn-dark ${s.contCta}`}
+                            onClick={this.continue}
+                            disabled={this.state.selected ? false : true}
                         >
                             <span className={s.text}>Continue</span>
                             <FontAwesomeIcon 
-                                icon={faAngleRight} 
-                                className={s.rightIcon} 
+                            icon={faAngleRight} 
+                            className={s.rightIcon} 
                             />
                         </button>
                     </div>

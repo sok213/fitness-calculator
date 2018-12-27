@@ -49,7 +49,7 @@ class WorkoutProgram extends Component {
         return (
             <div  
                 className={s.workoutProgramContainer}
-                style={{ height: this.isMobileAndStep2() }}    
+                style={{ height: this.isMobileAndStep2() }}
             >
                 <div 
                     className={`row ${s.headerContent}`} 
