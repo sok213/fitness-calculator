@@ -28,9 +28,12 @@ p, ul, li {
 .underline {
     height: 4px;
     width: 60px;
-    background-color: orange;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: rgb(81, 177, 161);
     margin-top: -6px;
     border-radius: 10px;
+
+    @media screen and (max-width: 520px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
