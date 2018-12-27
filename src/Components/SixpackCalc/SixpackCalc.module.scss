@@ -2,6 +2,7 @@
 @import '../../styles/typography.module.scss';
 
 .sixPackCalcContainer {
+    @extend .fadeIn;
     height: 100%;
     min-height: 600px;
     padding: 40px;
@@ -72,6 +73,7 @@
 }
 
 .summaryContainer {
+    @extend .fadeIn;
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
@@ -83,7 +85,7 @@
     }
 
     h2 {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 }
 

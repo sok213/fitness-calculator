@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import s from './App.module.scss';
+// import s from './App.module.scss';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Banner from './Components/Banner/Banner.js';

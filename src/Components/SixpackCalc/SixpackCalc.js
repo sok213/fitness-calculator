@@ -124,10 +124,10 @@ class SixpackCalc extends Component {
         if(currentLeanBodyMass >= goalWeight || bfp < 13) {
             return (
                 <div className={`${s.sixPackCalcContainer}`} key={3}>
-                    <Animated animationIn="fadeIn" animationOut="fadeOut" key={1}>
+                    <Animated animationIn="fadeIn" animationOut="fadeOut" key={3}>
                         <div className={`row`} key={3}> 
-                            <div className={`col-md-12 ${s.summaryContainer}`}>
-                                <h3>Abdominal Pack Fortold</h3>
+                            <div className={`col-md-12 ${s.summaryContainer}`} kery={3}>
+                                <h2>Abdominal Pack Fortold</h2>
                                 <p>Your lean body mass is <span className={s.boldMe}>{currentLeanBodyMass}</span> and your body fat percentage is <span className={s.boldMe}>{bfp}%</span> which means that you should already have visible defined abs. You should not consider losing anymore weight! If you do not have visible abs, perhaps you should eat more food and lift heavier weights.</p>
                             </div>
                         </div>
@@ -151,26 +151,28 @@ class SixpackCalc extends Component {
         }
         return (
             <div className={`${s.sixPackCalcContainer}`} key={2}>
-                <div className={`row`} key={2}> 
-                    <div className={`col-md-12 ${s.summaryContainer}`}>
-                        <h3>Abdominal Pack Fortold</h3>
-                        <p>Your lean body mass is <span className={s.boldMe}>{currentLeanBodyMass}</span> pounds which means that your goal weight to obtain well defined abs would be {goalWeight} pounds. The recommended rate of weight loss would be <span className={s.boldMe}>{rateOfWeightLossPerWeek}</span> pounds per week which would take <span className={s.boldMe}>{tt6} weeks</span> or <span className={s.boldMe}>{tt6Months} months</span>. If you want to obtain your abs a bit faster with more intense dieting and exercise, the recommended rate of weight loss would be <span className={s.boldMe}>{rateOfWeightLossPerWeekIntense}</span> pounds per week which would take <span className={s.boldMe}>{tt6V2}</span> weeks or <span className={s.boldMe}>{tt6V2Months} months</span> to obtain well defined abs and become aesthetic.</p>
+                <Animated animationIn="fadeIn" animationOut="fadeOut" key={3}>
+                    <div className={`row`} key={2}> 
+                        <div className={`col-md-12 ${s.summaryContainer}`} key={2}>
+                            <h2>Abdominal Pack Fortold</h2>
+                            <p>Your lean body mass is <span className={s.boldMe}>{currentLeanBodyMass}</span> pounds which means that your goal weight to obtain well defined abs would be {goalWeight} pounds. The recommended rate of weight loss would be <span className={s.boldMe}>{rateOfWeightLossPerWeek}</span> pounds per week which would take <span className={s.boldMe}>{tt6} weeks</span> or <span className={s.boldMe}>{tt6Months} months</span>. If you want to obtain your abs a bit faster with more intense dieting and exercise, the recommended rate of weight loss would be <span className={s.boldMe}>{rateOfWeightLossPerWeekIntense}</span> pounds per week which would take <span className={s.boldMe}>{tt6V2}</span> weeks or <span className={s.boldMe}>{tt6V2Months} months</span> to obtain well defined abs and become aesthetic.</p>
+                        </div>
                     </div>
-                </div>
-                <div className={`row`} key={2}>
-                    <div className={s.returnButtonContainer}>
-                        <button 
-                            type="button" 
-                            class="btn btn-dark"
-                            onClick={this.prevStep}
-                        >
-                            <FontAwesomeIcon 
-                                icon={faUndoAlt} 
-                                className={s.prevIcon} 
-                            />
-                        </button>
+                    <div className={`row`} key={2}>
+                        <div className={s.returnButtonContainer}>
+                            <button 
+                                type="button" 
+                                class="btn btn-dark"
+                                onClick={this.prevStep}
+                            >
+                                <FontAwesomeIcon 
+                                    icon={faUndoAlt} 
+                                    className={s.prevIcon} 
+                                />
+                            </button>
+                        </div>
                     </div>
-                </div>
+                </Animated>
             </div>
         );
     }
