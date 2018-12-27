@@ -48,15 +48,15 @@ class WorkoutProgram extends Component {
 
         return (
             <div  
-                className={s.workoutProgramContainer}
+                className={`${s.workoutProgramContainer}`}
                 style={{ height: this.isMobileAndStep2() }}
             >
                 <div 
                     className={`row ${s.headerContent}`} 
-                    style={{ display: this.state.activeSection < 2 ? 'block' : 'none' }}
+                    style={{ display: this.state.activeSection < 2 ? 'flex' : 'none' }}
                 >
-                    <div className={`col-md-12 col-xl-6`}>
-                        <div className={s.headerTitle}>
+                    <div className={`col-sm-12 col-md-8 align-self-right ${s.headerCol}`}>
+                        <div className={`${s.headerTitle}`}>
                             <h2>One Step to Mount Olympus<FontAwesomeIcon icon={faMountain} className={s.mountainIcon} /></h2>
                             <div className={s.underline}></div>
                         </div>

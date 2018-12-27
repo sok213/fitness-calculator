@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
+import s from './App.module.scss';
+import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Banner from './Components/Banner/Banner.js';
 import SixpackCalc from './Components/SixpackCalc/SixpackCalc.js';
