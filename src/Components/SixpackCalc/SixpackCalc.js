@@ -120,13 +120,29 @@ class SixpackCalc extends Component {
 
         if(currentLeanBodyMass >= goalWeight || bfp < 13) {
             return (
-                <div className={`${s.sixPackCalcContainer}`} key={2}>
-                    <div className={`row`} key={2}> 
-                        <div className={`col-md-12 ${s.summaryContainer}`}>
-                            <h3>Abdominal Pack Fortold</h3>
-                            <p>Your lean body mass is <span className={s.boldMe}>{currentLeanBodyMass}</span> and your body fat percentage is <span className={s.boldMe}>{bfp}%</span> which means that you should already have visible defined abs. You should not consider losing anymore weight! If you do not have visible abs, perhaps you should eat more food and lift heavier weights.</p>
+                <div className={`${s.sixPackCalcContainer}`} key={3}>
+                    <Animated animationIn="fadeIn" animationOut="fadeOut" key={1}>
+                        <div className={`row`} key={3}> 
+                            <div className={`col-md-12 ${s.summaryContainer}`}>
+                                <h3>Abdominal Pack Fortold</h3>
+                                <p>Your lean body mass is <span className={s.boldMe}>{currentLeanBodyMass}</span> and your body fat percentage is <span className={s.boldMe}>{bfp}%</span> which means that you should already have visible defined abs. You should not consider losing anymore weight! If you do not have visible abs, perhaps you should eat more food and lift heavier weights.</p>
+                            </div>
                         </div>
-                    </div>
+                        <div className={`row`} key={3}>
+                            <div className={s.returnButtonContainer}>
+                                <button 
+                                    type="button" 
+                                    class="btn btn-dark"
+                                    onClick={this.prevStep}
+                                >
+                                    <FontAwesomeIcon 
+                                        icon={faUndoAlt} 
+                                        className={s.prevIcon} 
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                    </Animated>
                 </div>
             );
         }
@@ -158,11 +174,25 @@ class SixpackCalc extends Component {
 
     renderHelpFindBfp() {
         return (
-            <div className={`${s.sixPackCalcContainer}`} key={3}>
-                <div className={`row ${s.headerContent}`} key={3}>
+            <div className={`${s.sixPackCalcContainer}`} key={4}>
+                <div className={`row ${s.headerContent}`} key={4}>
                     <div className={`col-md-12 col-xl-6`}>
                         <h3>How to Find Body Fat Percentage</h3>
                         <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+                    </div>
+                </div>
+                <div className={`row`} key={4}>
+                    <div className={s.returnButtonContainer}>
+                        <button 
+                            type="button" 
+                            class="btn btn-dark"
+                            onClick={this.prevStep}
+                        >
+                            <FontAwesomeIcon 
+                                icon={faUndoAlt} 
+                                className={s.prevIcon} 
+                            />
+                        </button>
                     </div>
                 </div>
             </div>

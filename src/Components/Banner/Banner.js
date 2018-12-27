@@ -31,6 +31,7 @@ class Banner extends Component {
                         </a>
                     </div>
                 </div>
+                {/* eslint-disable-next-line */}
                 <a name="workout"></a>
             </div>
         );

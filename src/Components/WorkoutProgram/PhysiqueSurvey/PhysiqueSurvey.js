@@ -74,8 +74,8 @@ class PhysiqueSurvey extends Component {
                         >
                             <span className={s.text}>Continue</span>
                             <FontAwesomeIcon 
-                            icon={faAngleRight} 
-                            className={s.rightIcon} 
+                                icon={faAngleRight} 
+                                className={s.rightIcon} 
                             />
                         </button>
                     </div>
@@ -91,16 +91,18 @@ class PhysiqueSurvey extends Component {
                     {this.renderSummary()}
                     <div className={`row`}>
                         <div className={s.returnButtonContainer}>
-                            <button 
-                                type="button" 
-                                class="btn btn-dark"
-                                onClick={this.prevStep}
-                            >
-                                <FontAwesomeIcon 
-                                    icon={faUndoAlt} 
-                                    className={s.prevIcon} 
-                                />
-                            </button>
+                            <a href="#workout">
+                                <button 
+                                    type="button" 
+                                    class="btn btn-dark"
+                                    onClick={this.prevStep}
+                                >
+                                    <FontAwesomeIcon 
+                                        icon={faUndoAlt} 
+                                        className={s.prevIcon} 
+                                    />
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </Animated>
