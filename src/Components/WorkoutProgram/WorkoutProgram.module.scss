@@ -32,4 +32,8 @@
     position: relative;
     top: -4px;
     font-size: 30px;
+
+    @media screen and (max-width: 620px) {
+        display: none;
+    }
 }
