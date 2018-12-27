@@ -105,8 +105,8 @@ class SixpackCalc extends Component {
         const currentLeanBodyMass = Math.round(weight * (1 - (bfp * 0.01)));
         const goalLeanBodyMass = currentLeanBodyMass * 0.97;
         const goalWeight = Math.round(goalLeanBodyMass / (1 - 0.12));
-        const rateOfWeightLossPerWeek = Math.round(weight * 0.005);
-        const rateOfWeightLossPerWeekIntense = Math.round(weight * 0.01);
+        const rateOfWeightLossPerWeek = (weight * 0.005).toFixed(1);
+        const rateOfWeightLossPerWeekIntense = (weight * 0.01).toFixed(1);
         const tt6 = Math.round((weight - goalWeight) / rateOfWeightLossPerWeek);
         const tt6Months = Math.round(tt6 / 4);
         const tt6V2 = Math.round((weight - goalWeight) / rateOfWeightLossPerWeekIntense);
@@ -117,7 +117,7 @@ class SixpackCalc extends Component {
                 <div className={`row`} key={2}> 
                     <div className={`col-md-12 ${s.summaryContainer}`}>
                         <h3>Abdominal Pack Fortold</h3>
-                        <p>Your lean body mass is <span className={s.boldMe}>{currentLeanBodyMass}</span> pounds which means that your goal weight for well defined abs would be {goalWeight}. The recommended rate of weight loss would be <span className={s.boldMe}>{rateOfWeightLossPerWeek}</span> pounds per week which would take <span className={s.boldMe}>{tt6} weeks</span> or <span className={s.boldMe}>{tt6Months} months</span> to obtain well defined abs. If you want to obtain your abs a bit faster with more intense dieting and exercise, the recommended rate of weight loss would be <span className={s.boldMe}>{rateOfWeightLossPerWeekIntense}</span> pounds per week which would take <span className={s.boldMe}>{tt6V2}</span> weeks or <span className={s.boldMe}>{tt6V2Months} months</span> to obtain well defined abs.</p>
+                        <p>Your lean body mass is <span className={s.boldMe}>{currentLeanBodyMass}</span> pounds which means that your goal weight to obtain well defined abs would be {goalWeight} pounds. The recommended rate of weight loss would be <span className={s.boldMe}>{rateOfWeightLossPerWeek}</span> pounds per week which would take <span className={s.boldMe}>{tt6} weeks</span> or <span className={s.boldMe}>{tt6Months} months</span>. If you want to obtain your abs a bit faster with more intense dieting and exercise, the recommended rate of weight loss would be <span className={s.boldMe}>{rateOfWeightLossPerWeekIntense}</span> pounds per week which would take <span className={s.boldMe}>{tt6V2}</span> weeks or <span className={s.boldMe}>{tt6V2Months} months</span> to obtain well defined abs and become aesthetic.</p>
                     </div>
                 </div>
             </div>
