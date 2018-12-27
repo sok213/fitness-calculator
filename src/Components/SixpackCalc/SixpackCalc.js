@@ -54,7 +54,7 @@ class SixpackCalc extends Component {
                         <Animated animationIn="fadeIn" animationOut="fadeOut" key={1}>
                             <form onSubmit={this.onSubmit.bind(this)}>
                                 <div class="form-group">
-                                    <label for="bodyfatperc">Body Fat Percentage</label>
+                                    <label for="bodyfatperc" className={s.formHeader}>Body Fat Percentage</label>
                                     <input 
                                         type="number" 
                                         class="form-control" 
@@ -76,7 +76,7 @@ class SixpackCalc extends Component {
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="weight">Weight</label>
+                                    <label for="weight" className={s.formHeader}>Weight</label>
                                     <input 
                                         type="number" 
                                         class="form-control" 
