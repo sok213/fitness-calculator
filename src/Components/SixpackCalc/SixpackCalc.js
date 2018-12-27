@@ -90,7 +90,7 @@ class SixpackCalc extends Component {
                                 <div className={s.buttonContainer}>
                                     <button 
                                         type="submit" 
-                                        class={`btn btn-primary ${s.submitCta}`}
+                                        class={`btn btn-dark ${s.submitCta}`}
                                     >
                                         See Results
                                     </button>
