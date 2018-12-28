@@ -10,7 +10,7 @@ class SixpackCalc extends Component {
         super(props);
 
         this.state = {
-            activeSection: 1,
+            activeSection: 3,
             weight: null,
             bodyFatPerc: null,
             age: null,
@@ -180,10 +180,10 @@ class SixpackCalc extends Component {
     renderHelpFindBfp() {
         return (
             <div className={`${s.sixPackCalcContainer}`} key={4}>
-                <div className={`row ${s.headerContent}`} key={4}>
-                    <div className={`col-md-12 col-xl-6`}>
+                <div className={`row ${s.helpHeaderContent}`} key={4}>
+                    <div className={`col-md-6 col-xl-6`}>
                         <h3>How to Find Body Fat Percentage</h3>
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+                        <p>There are various ways to measure your body fat percentage. The most effective, easiest, and most affordable way that we recommend is to purchase a <a href="https://www.amazon.com/Sequoia-Fitness-TrimCal-Caliper-Health-x/dp/B00B2MIDFY/ref=sr_1_2_a_it?ie=UTF8&qid=1545973556&sr=8-2-spons&keywords=fat+caliper&psc=1" target="_blank" rel="noopener noreferrer">fat caliper tool</a>. A fat caliper tool allows you to measure various skin folds on your body, most of them, if not all, include a spreadsheet which provides your body fat percentage based on the thickness of your skin fold.</p>
                     </div>
                 </div>
                 <div className={`row`} key={4}>
