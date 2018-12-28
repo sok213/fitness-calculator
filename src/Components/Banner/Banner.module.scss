@@ -86,6 +86,15 @@
     }
 }
 
+.introText {
+    @media screen and (max-width: 520px) and (max-height: 740px) {
+        border-radius: 3px;
+        padding: 10px 20px;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+    }
+}
+
 .aesthetic {
     letter-spacing: 6px;
     font-style: italic;
