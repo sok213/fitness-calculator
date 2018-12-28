@@ -44,7 +44,7 @@ class SixpackCalc extends Component {
     renderSection1 = () => {
         return (
             <div className={`${s.sixPackCalcContainer}`} key={1}>
-                <div className={`row ${s.headerContent}`} key={1}>
+                <div className={`row ${s.headerContent}`} key={2}>
                     <div className={`col-md-12 col-xl-6`}>
                         <div className={s.headerTitle}>
                             <h2>Abdominal Pack Foreteller</h2>
@@ -55,13 +55,13 @@ class SixpackCalc extends Component {
                 </div>
                 <div className={`row ${s.calculator}`}>
                     <div className={s.formContainer}>
-                        <Animated animationIn="fadeIn" animationOut="fadeOut" key={1}>
+                        <Animated animationIn="fadeIn" animationOut="fadeOut" key={3}>
                             <form onSubmit={this.onSubmit.bind(this)}>
-                                <div class="form-group">
+                                <div className="form-group">
                                     <label for="bodyfatperc" className={s.formHeader}>Body Fat Percentage</label>
                                     <input 
                                         type="number" 
-                                        class="form-control" 
+                                        className="form-control" 
                                         id="bodyfatperc" 
                                         placeholder="Enter body fat %"
                                         value={this.state.bodyFatPerc}
@@ -79,11 +79,11 @@ class SixpackCalc extends Component {
                                         </small>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div className="form-group">
                                     <label for="weight" className={s.formHeader}>Weight</label>
                                     <input 
                                         type="number" 
-                                        class="form-control" 
+                                        className="form-control" 
                                         id="weight" 
                                         placeholder="Enter your weight"
                                         value={this.state.weight}
@@ -94,7 +94,7 @@ class SixpackCalc extends Component {
                                 <div className={s.buttonContainer}>
                                     <button 
                                         type="submit" 
-                                        class={`btn btn-dark ${s.submitCta}`}
+                                        className={`btn btn-dark ${s.submitCta}`}
                                     >
                                         See Results
                                     </button>
@@ -124,19 +124,19 @@ class SixpackCalc extends Component {
 
         if(currentLeanBodyMass >= goalWeight || bfp < 13) {
             return (
-                <div className={`${s.sixPackCalcContainer}`} key={3}>
-                    <Animated animationIn="fadeIn" animationOut="fadeOut" key={3}>
-                        <div className={`row`} key={3}> 
-                            <div className={`col-md-12 ${s.summaryContainer}`} kery={3}>
+                <div className={`${s.sixPackCalcContainer}`} key={4}>
+                    <Animated animationIn="fadeIn" animationOut="fadeOut" key={5}>
+                        <div className={`row`} key={6}> 
+                            <div className={`col-md-12 ${s.summaryContainer}`} key={7}>
                                 <h2>Abdominal Pack Fortold</h2>
                                 <p>Your lean body mass is <span className={s.boldMe}>{currentLeanBodyMass}</span> and your body fat percentage is <span className={s.boldMe}>{bfp}%</span> which means that you should already have visible defined abs. You should not consider losing anymore weight! If you do not have visible abs, perhaps you should eat more food and lift heavier weights.</p>
                             </div>
                         </div>
-                        <div className={`row`} key={3}>
+                        <div className={`row`} key={8}>
                             <div className={s.returnButtonContainer}>
                                 <button 
                                     type="button" 
-                                    class="btn btn-dark"
+                                    className="btn btn-dark"
                                     onClick={this.prevStep}
                                 >
                                     <FontAwesomeIcon 
@@ -151,19 +151,19 @@ class SixpackCalc extends Component {
             );
         }
         return (
-            <div className={`${s.sixPackCalcContainer}`} key={2}>
-                <Animated animationIn="fadeIn" animationOut="fadeOut" key={3}>
-                    <div className={`row`} key={2}> 
-                        <div className={`col-md-12 ${s.summaryContainer}`} key={2}>
+            <div className={`${s.sixPackCalcContainer}`} key={9}>
+                <Animated animationIn="fadeIn" animationOut="fadeOut" key={10}>
+                    <div className={`row`} key={11}> 
+                        <div className={`col-md-12 ${s.summaryContainer}`} key={12}>
                             <h2>Abdominal Pack Fortold</h2>
                             <p>Your lean body mass is <span className={s.boldMe}>{currentLeanBodyMass}</span> pounds which means that your goal weight to obtain well defined abs would be {goalWeight} pounds. The recommended rate of weight loss would be <span className={s.boldMe}>{rateOfWeightLossPerWeek}</span> pounds per week which would take <span className={s.boldMe}>{tt6} weeks</span> or <span className={s.boldMe}>{tt6Months} months</span>. If you want to obtain your abs a bit faster with more intense dieting and exercise, the recommended rate of weight loss would be <span className={s.boldMe}>{rateOfWeightLossPerWeekIntense}</span> pounds per week which would take <span className={s.boldMe}>{tt6V2}</span> weeks or <span className={s.boldMe}>{tt6V2Months} months</span> to obtain well defined abs and become aesthetic.</p>
                         </div>
                     </div>
-                    <div className={`row`} key={2}>
+                    <div className={`row`} key={13}>
                         <div className={s.returnButtonContainer}>
                             <button 
                                 type="button" 
-                                class="btn btn-dark"
+                                className="btn btn-dark"
                                 onClick={this.prevStep}
                             >
                                 <FontAwesomeIcon 
@@ -180,8 +180,8 @@ class SixpackCalc extends Component {
 
     renderHelpFindBfp() {
         return (
-            <div className={`${s.sixPackCalcContainer}`} key={4}>
-                <div className={`row ${s.helpHeaderContent}`} key={4}>
+            <div className={`${s.sixPackCalcContainer}`} key={14}>
+                <div className={`row ${s.helpHeaderContent}`} key={15}>
                     <div className={`col-md-6 col-xl-6`}>
                         <h3>How to Find Body Fat Percentage</h3>
                         <div className={s.imgContainer}>
@@ -190,11 +190,11 @@ class SixpackCalc extends Component {
                         <p>There are various ways to measure your body fat percentage. The most effective, easiest, and most affordable way that we recommend is to purchase a <a href="https://www.amazon.com/Sequoia-Fitness-TrimCal-Caliper-Health-x/dp/B00B2MIDFY/ref=sr_1_2_a_it?ie=UTF8&qid=1545973556&sr=8-2-spons&keywords=fat+caliper&psc=1" target="_blank" rel="noopener noreferrer">fat caliper tool</a>. A fat caliper tool allows you to measure various skin folds on your body, most of them, if not all, include a spreadsheet which provides your body fat percentage based on the thickness of your skin fold.</p>
                     </div>
                 </div>
-                <div className={`row`} key={4}>
+                <div className={`row`} key={16}>
                     <div className={s.returnButtonContainer}>
                         <button 
                             type="button" 
-                            class="btn btn-dark"
+                            className="btn btn-dark"
                             onClick={this.prevStep}
                         >
                             <FontAwesomeIcon 

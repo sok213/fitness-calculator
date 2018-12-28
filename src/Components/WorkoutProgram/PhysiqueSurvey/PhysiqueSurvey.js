@@ -36,7 +36,7 @@ class PhysiqueSurvey extends Component {
         this.setState({ selected: option });
     }
 
-    renderOptionBox(option) {
+    renderOptionBox(option, i) {
         return (
             <div 
                 className={`
@@ -44,6 +44,7 @@ class PhysiqueSurvey extends Component {
                     ${this.state.selected === option.type ? s.selected : null}
                 `}
                 onClick={this.selectOption.bind(this, option.type)}
+                key={i}
             >
                 <p className={s.header}>{option.type}</p>
                 <p>{option.desc}</p>
@@ -57,8 +58,8 @@ class PhysiqueSurvey extends Component {
                 <Animated animationIn="fadeIn" animationOut="fadeOut" key={1}>
                     <div className={s.scrollingWrapper}>
                         <div className={s.cardContainer}>
-                            {this.state.options.map((option) => {
-                                return this.renderOptionBox(option);
+                            {this.state.options.map((option, i) => {
+                                return this.renderOptionBox(option, i);
                             })}
                         </div>
                     </div>
@@ -68,7 +69,7 @@ class PhysiqueSurvey extends Component {
                     `}>
                         <button 
                             type="button" 
-                            class={`btn btn-dark ${s.contCta}`}
+                            className={`btn btn-dark ${s.contCta}`}
                             onClick={this.continue}
                             disabled={this.state.selected ? false : true}
                         >
