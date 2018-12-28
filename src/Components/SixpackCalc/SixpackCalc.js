@@ -12,10 +12,10 @@ class SixpackCalc extends Component {
 
         this.state = {
             activeSection: 1,
-            weight: null,
-            bodyFatPerc: null,
-            age: null,
-            currentLeanBodyMass: null
+            weight: '',
+            bodyFatPerc: '',
+            age: '',
+            currentLeanBodyMass: ''
         }
     }
 
@@ -58,7 +58,7 @@ class SixpackCalc extends Component {
                         <Animated animationIn="fadeIn" animationOut="fadeOut" key={3}>
                             <form onSubmit={this.onSubmit.bind(this)}>
                                 <div className="form-group">
-                                    <label for="bodyfatperc" className={s.formHeader}>Body Fat Percentage</label>
+                                    <label htmlFor="bodyfatperc" className={s.formHeader}>Body Fat Percentage</label>
                                     <input 
                                         type="number" 
                                         className="form-control" 
@@ -80,7 +80,7 @@ class SixpackCalc extends Component {
                                     </div>
                                 </div>
                                 <div className="form-group">
-                                    <label for="weight" className={s.formHeader}>Weight</label>
+                                    <label htmlFor="weight" className={s.formHeader}>Weight</label>
                                     <input 
                                         type="number" 
                                         className="form-control" 
