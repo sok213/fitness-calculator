@@ -11,7 +11,7 @@ class SixpackCalc extends Component {
         super(props);
 
         this.state = {
-            activeSection: 3,
+            activeSection: 1,
             weight: null,
             bodyFatPerc: null,
             age: null,
