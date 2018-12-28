@@ -95,7 +95,7 @@ class PhysiqueSurvey extends Component {
                             <a href="#workout">
                                 <button 
                                     type="button" 
-                                    class="btn btn-dark"
+                                    className="btn btn-dark"
                                     onClick={this.prevStep}
                                 >
                                     <FontAwesomeIcon 
