@@ -3,6 +3,26 @@
 .bannerContainer {
     height: 100vh;
     min-height: 600px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    // background-color: black;
+    background-size: 48%;
+
+    @media screen and (max-width: 1400px) {
+        background-size: 50%;
+    }
+
+    @media screen and (max-width: 999px) {
+        background-size: 65%;
+    }
+
+    @media screen and (max-width: 750px) {
+        background-size: 75%;
+    }
+
+    @media screen and (max-width: 550px) {
+        background-size: 100%;
+    }
 }
 
 .header {
@@ -30,6 +50,13 @@
             font-size: 26px !important;
         }
     }
+
+    @media screen and (max-width: 320px) {
+        h1 {
+            font-size: 20px !important;
+            line-height: 23px !important;
+        }
+    }
 }
 
 .startCta {
@@ -52,6 +79,10 @@
     h1 {
         font-size: 30px;
         line-height: 32px;
+    }
+
+    @media screen and (max-width: 320px) {
+        font-size: 14px;
     }
 }
 

@@ -3,6 +3,7 @@ import s from './SixpackCalc.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUndoAlt } from '@fortawesome/free-solid-svg-icons';
 import { Animated } from "react-animated-css";
+import caliper from './../../assets/caliper.jpeg';
 
 class SixpackCalc extends Component {
 
@@ -183,6 +184,9 @@ class SixpackCalc extends Component {
                 <div className={`row ${s.helpHeaderContent}`} key={4}>
                     <div className={`col-md-6 col-xl-6`}>
                         <h3>How to Find Body Fat Percentage</h3>
+                        <div className={s.imgContainer}>
+                            <img src={caliper} alt="fat caliper tool" />
+                        </div>
                         <p>There are various ways to measure your body fat percentage. The most effective, easiest, and most affordable way that we recommend is to purchase a <a href="https://www.amazon.com/Sequoia-Fitness-TrimCal-Caliper-Health-x/dp/B00B2MIDFY/ref=sr_1_2_a_it?ie=UTF8&qid=1545973556&sr=8-2-spons&keywords=fat+caliper&psc=1" target="_blank" rel="noopener noreferrer">fat caliper tool</a>. A fat caliper tool allows you to measure various skin folds on your body, most of them, if not all, include a spreadsheet which provides your body fat percentage based on the thickness of your skin fold.</p>
                     </div>
                 </div>

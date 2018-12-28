@@ -118,3 +118,15 @@
 .helpCta {
     padding-top: 8px;
 }
+
+.imgContainer {
+    @extend .subtleShadow;
+    padding: 20px 25px 50px 25px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}

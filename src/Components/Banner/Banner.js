@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import s from './Banner.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import zyzzForever from './../../assets/aesthetic.jpeg';
 
 class Banner extends Component {
 
@@ -10,7 +11,9 @@ class Banner extends Component {
             <div className={`
                 ${s.bannerContainer} 
                 container-fluid
-            `}>
+            `}
+            style={{ backgroundImage: `url(${zyzzForever})` }}
+            >
                 <div className={`row`}>
                     <div className={`col-lg-12 ${s.header}`}>
                         <div className={s.headerContent}>
