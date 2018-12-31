@@ -132,9 +132,7 @@ class PhysiqueSurvey extends Component {
     renderSummary = () => {
         if(this.state.selected === 'Skinny') {
             return (
-                <div className={`${s.summaryContent} col-md-12 col-xl-6`}>
-                    {/* eslint-disable-next-line */}
-                    <a name="overviewTop"></a>   
+                <div className={`${s.summaryContent} col-md-12 col-xl-6`}>   
                     <h3>Skinny Overview</h3>
                     <p>The best workout program skinny body types seeking to achieve an aesthetic physique is to focus on building muscle mass and not worry too much on burning calories. Workouts should primarily consist of heavy major lifts such as deadlifts, bench press, squats, along with body weight exercises such as push-ups and pull-ups. Cardio should be kept to a minimal since the focus is to gain weight in order to build a stronger and more massive body.</p>
                     <p>Diet is very crucial to making sure your body properly recovers after a workout, especially when you want to make muscle gains. Your diet should consist of a caloric surplus which means that you are consuming more calories than your current caloric maintenance. Nutrition should be heavy in protein and healthy fats.</p>
@@ -157,9 +155,7 @@ class PhysiqueSurvey extends Component {
             );
         } else if (this.state.selected === 'Skinny Fat') {
             return (
-                <div className={`${s.summaryContent} col-md-12 col-xl-6`}>
-                    {/* eslint-disable-next-line */}
-                    <a name="overviewTop"></a>   
+                <div className={`${s.summaryContent} col-md-12 col-xl-6`}>   
                     <h3>Skinny Fat Overview</h3>
                     <p>The best workout program for skinny fat body types seeking to achieve an aesthetic physique is to focus on both building muscle and burning fat. The goal should be to build a good amount of muscle and to also decrease your overall body fat percentage. Fortunately, building muscle is an efficient way to also burn fat. Workouts should primarily consist of heavy major lifts such as deadlifts, bench press, squats, along with body weight exercises such as push-ups and pull-ups. Some cardio should be added to your workouts to help burn calories and improve metabolism.</p>
                     <p>Diet should be protein heavy, keep the fats to a medium, and make sure that you are consuming a minimal amount of carbs. Calories should be slightly above your current maintenance calories for muscle recovery and strength gains. One amazing tool that would greatly make your fat loss more efficient is to incorporate intermittent fasting and consider black coffee in the morning. This strategy is a great dietary supplement to burn calories and it works great to hit the gym while on an empty stomach for extra focus and efficient fat loss.</p>
@@ -182,9 +178,7 @@ class PhysiqueSurvey extends Component {
             );
         } else if (this.state.selected === 'Average') {
             return (
-                <div className={`${s.summaryContent} col-md-12 col-xl-6`}>
-                    {/* eslint-disable-next-line */}
-                    <a name="overviewTop"></a>   
+                <div className={`${s.summaryContent} col-md-12 col-xl-6`}>   
                     <h3>Average Overview</h3>
                     <p>The best workout program for average body types that consists of some fat and some muscle is a routine that incorporates high repetition sets with medium weights. An average body type should have a decent amount of muscle, so shredding off excess stubborn fat and increasing vascularity should be the most efficient route to achieve an aesthetic physique. Workouts should primarily consist of high rep body weight exercises such as weighted pull-ups and pushups along with isolation movements such as bicep curls, bench press, and shoulder-presses. Some cardio in combination with intermittent fasting should speed up the fat burning process. Abs should be worked on at least 3 times a week.</p>
                     <p>Diet should consist of high protein, low carbs, and low fat. It is crucial to keep the carbs low for an average body type in order to get rid of the stubborn belly fat and achieve the shredded vascular look. Stay away from dairy products like milk, cheese, and pasta since those are generally the type of foods to get you bloated and difficult to get rid of stubborn belly fat.</p>
@@ -213,9 +207,7 @@ class PhysiqueSurvey extends Component {
             );
         } else if (this.state.selected === 'Overweight') {
             return (
-                <div className={`${s.summaryContent} col-md-12 col-xl-6`}>
-                    {/* eslint-disable-next-line */}
-                    <a name="overviewTop"></a>   
+                <div className={`${s.summaryContent} col-md-12 col-xl-6`}>   
                     <h3>Overweight Overview</h3>
                     <p>The best workout program for overweight body types that consists of mostly fat is a routine that incorporates high repetition sets with light weights along with fasted cardio. Body weight exercises such as body squats, push-ups, pull-ups, and lunges are great since your body is already heavy and you can use your own body weight to build muscle and burn fat.</p>
                     <p>Diet is the most crucial aspect for overweight body types. Make sure you are in a constant caloric deficit and incorporate intermittent fasting for great fat loss results and improved metabolism. Nutrition should consist of clean protein coming from meat that is fresh and not fried. Carbs should be kept to a minimum along with fats. Stay away from cheese, pasta, and any high fructose processed foods.</p>

@@ -19,6 +19,8 @@ class App extends Component {
 		return (
 			<div className="App">
 				<Banner />
+				{/* eslint-disable-next-line */}
+				<a name="overviewTop"></a>   
 				<WorkoutProgram />
 				<SixpackCalc />
 			</div>
