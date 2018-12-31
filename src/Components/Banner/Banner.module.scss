@@ -57,7 +57,7 @@
         }
     }
 
-    @media screen and (max-height: 667px) {
+    @media screen and (max-width: 420px) and (max-height: 667px) {
         margin-top: 20px;
         margin-bottom: -30px;
         .underline {
@@ -71,7 +71,7 @@
 }
 
 .startCtaContainer {
-    @media screen and (max-height: 667px) {
+    @media screen and (max-width: 420px) and (max-height: 667px) {
         display: none;
     }
 }
