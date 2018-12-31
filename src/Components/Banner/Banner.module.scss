@@ -58,11 +58,21 @@
     }
 
     @media screen and (max-height: 667px) {
-        margin-top: 10px;
+        margin-top: 20px;
+        margin-bottom: -30px;
+        .underline {
+            display: none !important;
+        }
         h1 {
             font-size: 20px !important;
             line-height: 22px !important;
         }
+    }
+}
+
+.startCtaContainer {
+    @media screen and (max-height: 667px) {
+        display: none;
     }
 }
 

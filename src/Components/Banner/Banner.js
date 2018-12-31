@@ -25,7 +25,7 @@ class Banner extends Component {
                         </div>
                     </div>
                 </div>
-                <div className={`row`} style={{ textAlign: 'center'}}>
+                <div className={`row ${s.startCtaContainer}`} style={{ textAlign: 'center'}}>
                     <div className={`col-lg-12 ${s.getStartedCta}`}>
                         <a href="#workout">
                             <button 
