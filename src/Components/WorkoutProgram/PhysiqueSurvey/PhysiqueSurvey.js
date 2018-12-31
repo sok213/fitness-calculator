@@ -67,19 +67,20 @@ class PhysiqueSurvey extends Component {
                         row 
                         ${s.buttonContainer} 
                     `}>
-                        <button 
-                            href="#workout"
-                            type="button" 
-                            className={`btn btn-dark ${s.contCta}`}
-                            onClick={this.continue}
-                            disabled={this.state.selected ? false : true}
-                        >
-                            <span className={s.text}>Continue</span>
-                            <FontAwesomeIcon 
-                                icon={faAngleRight} 
-                                className={s.rightIcon} 
-                            />
-                        </button>
+                        <a href="#overviewTop">
+                            <button 
+                                type="button" 
+                                className={`btn btn-dark ${s.contCta}`}
+                                onClick={this.continue}
+                                disabled={this.state.selected ? false : true}
+                            >
+                                <span className={s.text}>Continue</span>
+                                <FontAwesomeIcon 
+                                    icon={faAngleRight} 
+                                    className={s.rightIcon} 
+                                />
+                            </button>
+                        </a>
                     </div>
                 </Animated>
             </div>
