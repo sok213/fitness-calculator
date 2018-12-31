@@ -108,7 +108,6 @@ class SixpackCalc extends Component {
     }
 
     renderSection2 = () => {
-        // TODO: Generate Conclusion.
         const weight = this.state.weight;
         const bfp = this.state.bodyFatPerc;
         const currentLeanBodyMass = Math.round(weight * (1 - (bfp * 0.01)));
