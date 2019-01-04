@@ -62,6 +62,9 @@ class WorkoutProgram extends Component {
                         </div>
                         <p>Mount Olympus is home of the Greek gods, the ones who posses the most aesthetic physiques known to man. It is believed that one must achieve an incredible aesthetic physique, and after death, they will forever live on the peak of Mount Olympus where they can train with the best equipment and drink from the fountain of gods that forever overflow with the best pre-workout known to give the best pumps. Here, you will be provided with the first step to discovering what type of workout regime you should begin based on your body type to maybe one day reach your aesthetic potential.</p>
                     </div>
+                    <div className={s.optionsHeader}>
+                        <h4>Choose your body type</h4>
+                    </div>
                 </div>
                 <div className={`row ${s.survey}`}>
                     <div className={`col-lg-12`}>
