@@ -47,10 +47,10 @@ class SixpackCalc extends Component {
                 <div className={`row ${s.headerContent}`} key={2}>
                     <div className={`col-md-12 col-xl-6`}>
                         <div className={s.headerTitle}>
-                            <h2>Abdominal Pack Foreteller</h2>
+                            <h2>Six Pack Calculator</h2>
                             <div className={s.underline}></div>
                         </div>
-                        <p>Having visible abs is one of the most crucial components that determines whether a physique is aesthetic or just average. It can be difficult to do your own research to figure out how much weight to lose to have your abs show. Fortunately, we have created a tool to make your life easier! Our sophisticated Abdominal Pack Foreteller tool will calculate how much weight you need to lose and how many weeks it will take for you to obtain visible abs based on your current body stats.</p>
+                        <p>Having visible abs is one of the most crucial components that determines whether a physique is aesthetic or just average. It can be difficult to do your own research to figure out how much weight to lose to have your abs show. Fortunately, we have created a tool to make your life easier! Our sophisticated Six Pack Calculator tool will calculate how much weight you need to lose and how many weeks it will take for you to obtain visible abs based on your current body stats.</p>
                     </div>
                 </div>
                 <div className={`row ${s.calculator}`}>
@@ -127,7 +127,7 @@ class SixpackCalc extends Component {
                     <Animated animationIn="fadeIn" animationOut="fadeOut" key={5}>
                         <div className={`row`} key={6}> 
                             <div className={`col-md-12 ${s.summaryContainer}`} key={7}>
-                                <h2>Abdominal Pack Fortold</h2>
+                                <h2>Six Pack Calculator</h2>
                                 <p>Your lean body mass is <span className={s.boldMe}>{currentLeanBodyMass}</span> and your body fat percentage is <span className={s.boldMe}>{bfp}%</span> which means that you should already have visible defined abs. You should not consider losing anymore weight! If you do not have visible abs, perhaps you should eat more food and lift heavier weights.</p>
                             </div>
                         </div>
@@ -154,7 +154,7 @@ class SixpackCalc extends Component {
                 <Animated animationIn="fadeIn" animationOut="fadeOut" key={10}>
                     <div className={`row`} key={11}> 
                         <div className={`col-md-12 ${s.summaryContainer}`} key={12}>
-                            <h2>Abdominal Pack Fortold</h2>
+                            <h2>Results</h2>
                             <p>Your lean body mass is <span className={s.boldMe}>{currentLeanBodyMass}</span> pounds which means that your goal weight to obtain well defined abs would be {goalWeight} pounds. The recommended rate of weight loss would be <span className={s.boldMe}>{rateOfWeightLossPerWeek}</span> pounds per week which would take <span className={s.boldMe}>{tt6} weeks</span> or <span className={s.boldMe}>{tt6Months} months</span>. If you want to obtain your abs a bit faster with more intense dieting and exercise, the recommended rate of weight loss would be <span className={s.boldMe}>{rateOfWeightLossPerWeekIntense}</span> pounds per week which would take <span className={s.boldMe}>{tt6V2}</span> weeks or <span className={s.boldMe}>{tt6V2Months} months</span> to obtain well defined abs and become aesthetic.</p>
                         </div>
                     </div>
